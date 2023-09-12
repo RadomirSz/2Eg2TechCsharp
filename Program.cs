@@ -1,5 +1,6 @@
 ﻿
 
+using System;
 //euklides x 2
 
 
@@ -31,19 +32,19 @@ Console.WriteLine();
 Console.WriteLine(euklidesmod(a,b));*/
 
 
-/*Random r = new Random();
+Random r = new Random();
 int n = 20;
 int[] T = new int[n];
 for (int i = 0; i < n; i++) T[i] = r.Next(1, 100);
 
-foreach (int i in T) Console.Write(i + " ");
+foreach (int i in T) System.Console.Write(i + " ");
 
-Console.WriteLine();
-Console.WriteLine();
+System.Console.WriteLine();
+System.Console.WriteLine();
 void sortbobel(int[] T)
 {
     int temp;
-    for (int i = n - 1; i > 0; i--)
+    for (int i = T.Length - 1; i > 0; i--)
     {
         for (int j = 0; j < i; j++)
         {
@@ -55,9 +56,9 @@ void sortbobel(int[] T)
             }
         }
     }
-    foreach (int i in T) Console.Write(i + " ");
+    foreach (int i in T) System.Console.Write(i + " ");
 }
-sortbobel(T);*/
+sortbobel(T);
 
 // wypisz wszystkie pary liczb zaprzyjaznionych z przedzialu 1-10000
 
@@ -100,7 +101,7 @@ foreach (var l in list)
 }*/
 
 // macierz - wypisz sumy kolejnych ramek w macierzy kwadratowej o n parzystym
-using System.Collections;
+/*using System.Collections;
 
 Random r = new Random();
 int n = 8;
@@ -144,7 +145,7 @@ int[] M = S.ToArray();
 for (int i = 0; i < S.Count; i++) 
 {
     Console.WriteLine(M[i] - M[i-1]);
-}
+}*/
 
 // Źle!!
 //wdfejbhfiweyurfh
