@@ -143,3 +143,5 @@ while (m > 0)
     if (c < a || c < b) c++ ; m--;
     if (a == b && a == c) a++; m--;
 }
+
+//lob is in the air
