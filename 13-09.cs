@@ -1,24 +1,12 @@
-﻿
-using System;
-//euklides x 2
+﻿﻿
+using System.Runtime.CompilerServices;
 
-
-/*int a = int.Parse(Console.ReadLine());
-int b = int.Parse(Console.ReadLine());
-
-int euklidesodej(int a, int b)
+int nww(int a, int b)
 {
-    while ( a!=b )
-    {
-        if (a > b) { a = a - b; }
-        if (b > a) { b = b - a; }
-    }
-    return a;
+    return (a * b) / nwd(a, b);
 }
-Console.WriteLine(euklidesodej(a,b));
-int euklidesmod(int a, int b)
+int nwd(int a, int b)
 {
-    
     while (b > 0)
     {
         int r = a % b;
@@ -27,125 +15,131 @@ int euklidesmod(int a, int b)
     }
     return a;
 }
-Console.WriteLine();
-Console.WriteLine(euklidesmod(a,b));*/
 
+
+
+//1.User podaje NWD i NWW dwóch liczb. Napisz program, który znajdzie te liczby.
+
+//brute force
+/*int x = int.Parse(Console.ReadLine());
+int y = int.Parse(Console.ReadLine());
+for (int i = 0; i < 10000; i++)
+{
+    for (int j = 0; j < 10000; j++)
+    {
+        if (nwd(i, j) == x && nww(i, j) == y)
+        { 
+            Console.WriteLine($"{i},{j}"); 
+        }
+    }
+}*/
+
+// inaczej
+
+/*int iloczyn = x * y;
+for (int i = 1; i < iloczyn; i++)
+{
+    if (iloczyn % i == 0 && nwd(i, iloczyn / i) == x && nww(i,iloczyn/i) == y && i < iloczyn)
+    {
+        Console.WriteLine(i + " " + iloczyn/i);
+    }
+}*/
+
+
+//2. Sprawdź czy suma dwóch ułamków podanych przez usera jest ułamkiem niewłaściwym.
 /*
-Random r = new Random();
-int n = 20;
-int[] T = new int[n];
-for (int i = 0; i < n; i++) T[i] = r.Next(1, 100);
+string pier = Console.ReadLine();
+string drug = Console.ReadLine();
 
-foreach (int i in T) System.Console.Write(i + " ");
+string[] P = pier.Split("/");
+string[] D = drug.Split("/");
 
-System.Console.WriteLine();
-System.Console.WriteLine();
-void sortbobel(int[] T)
+int a = int.Parse(P[0]);
+int b = int.Parse(P[1]);
+int c = int.Parse(D[0]);
+int d = int.Parse(D[1]);
+
+int mianownik = nww(b, d);
+int licz1 = mianownik * a / b;
+int licz2 = mianownik * c / d;
+
+if (licz1 + licz2 > mianownik) Console.WriteLine("Tak");
+else Console.WriteLine("NIE");*/
+//3. Sprawdź czy wieksza jest suma dwóch wpisanych przez usera ułamków czy suma ich odwrotności.
+
+//4. Sprawdź czy w danym napisie więcej jest spółgłosek czy samogłosek.
+/*char[] S = new char[6]{'a', 'e', 'i', 'o', 'u', 'y'};
+string napis = Console.ReadLine();
+
+int liczniksamo = 0;
+int licznikspol = 0;
+
+foreach (char i in napis)
 {
-    int temp;
-    for (int i = T.Length - 1; i > 0; i--)
+    bool flaga = true;
+    for (int j = 0; j < 6; j++)
     {
-        for (int j = 0; j < i; j++)
-        {
-            if (T[j] > T[j + 1])
-            {
-                temp = T[j];
-                T[j] = T[j + 1];
-                T[j + 1] = temp;
-            }
+        if (i == S[j])
+        { 
+            liczniksamo += 1;
+            flaga = false;
         }
     }
-    foreach (int i in T) System.Console.Write(i + " ");
-}
-sortbobel(T); 
-*/
-
-// wypisz wszystkie pary liczb zaprzyjaznionych z przedzialu 1-10000
-
-/*int sumadzielnikow(int n) 
-{
-    int suma=0;
-    for (int i = 1; i < n/2; i++)
-        if (n % i == 0) suma += i;
-    return suma;
-}
-int temp;
-for (int i = 1; i <= 10000; i++)
-{
-    temp = sumadzielnikow(i);
-    if (sumadzielnikow(temp) == i && i != temp)
-    {
-        Console.WriteLine($"{i},{temp}");
-    }
-}*/
-
-
-
-
-
-
-
-
-/*Random r = new Random();
-int n = 30;
-int[] T = new int[n];
-for (int i = 0; i < n; i++) T[i] = r.Next(100,1000);
-List<int> list = new List<int>();
-foreach (var t in T)
-{ 
-    if(t%17==0) list.Add(t);
-}
-foreach (var l in list)
-{
-    Console.Write(l+" ");
-}*/
-
-// macierz - wypisz sumy kolejnych ramek w macierzy kwadratowej o n parzystym
-/*using System.Collections;
-
-Random r = new Random();
-int n = 8;
-int[,] T = new int[n,n]; 
-
-for (int i = 0; i < n; i++) 
-    for (int j = 0; j < n; j++) T[i, j] = r.Next(0, 10);
-
-
-for (int i = 0; i < n; i++)
-{
-    for (int j = 0; j < n; j++)
-    {
-        Console.Write(T[i,j]+" ");
-    }
-    Console.WriteLine();
+    if (flaga) { licznikspol += 1; }
 }
 
 
-//sposob 1
-List<int> S = new List<int>();
-int suma;
-for (int i = 1; i <= n / 2; i++)
+if (liczniksamo > licznikspol) Console.WriteLine("samoglosek wiecej");
+else if (licznikspol == liczniksamo) Console.WriteLine("jest tyle samo");
+else Console.WriteLine("spolglosek wiecej");*/
+
+
+
+//5. Podaj której literki jest najwięcej w podanym napisie i jaka to jest literka.
+
+//6. Znajdź trzy takie liczby, których suma, a także suma każdej pary tych liczb jest kwadratem innej liczby.
+
+//7. Dwie wieżyce, jedna wysokości 30 stóp, druga 40 stóp, oddalone są od siebie o 50 stóp.
+//Pomiędzy nimi znajduje się wodotrysk, do którego zlatują dwa ptaki z wierzchołków obu wieżyc
+//i lecąc z jednakową prędkością przybywają w tym samym czasie.
+//Napisz program, który obliczy jest dłuższa odległość pozioma wodotrysku jednej z wieżyc?
+
+//8. Brajanek z Dżesiką grają w siedem. Gra polega na tym, że jeden z graczy podaje granice przedziału <a, b>
+//a drugi z nich musi szybko odpowiedzieć, ile w tym przedziale jest liczb,
+//które są podzielne przez siedem, albo suma ich cyfr jest podzielna przez siedem (lub jedno i drugie).
+//Napisz program, który pomaga w takich obliczeniach.
+
+//9. Halinka wspina się na schody w centrum handlowym. Za każdym razem, gdy dziewczynka wspina się na nowe schody,
+//zaczyna liczyć na głos po kolei od 1 do ilości stopni. Na przykład,
+//jeśli wspina się na dwa zestawy schodów – jeden z 3 stopniami, a drugi z 4 stopniami –
+//będzie liczyć tak: 1, 2, 3, 1, 2, 3, 4.Masz dane wszystkie liczby, które Halinka wypowiedziała
+//podczas całej swojej wycieczki po centrum i Twoim zadaniem jest obliczenie, ile zestawów schodów „zaliczyła”.
+
+//10. Brajanek wybrał się na spacer do parku. Przysiadł na chwilę na parkowej ławce i obserwował
+//przechadzających się ludzi.
+//W parku znajduje się n ławek ponumerowanych od 1 do n. Kiedy Brajanek zaczął swoje
+//obserwacje, na i-tej ławce siedziało ai osób. Do parku przybyło właśnie m osób i każda chciałaby
+//znaleźć sobie miejsce na ławce.
+//Niech k oznacza największą liczbę osób siedzących na jednej ławce (po przyjściu tych dodatkowych m osób). 
+//Jaka jest minimalna, a jaka maksymalna wartość k?
+
+int a = int.Parse(Console.ReadLine());
+int b = int.Parse(Console.ReadLine());
+int c = int.Parse(Console.ReadLine());
+int m = int.Parse(Console.ReadLine());
+
+int max = 0, k;
+if (a > b && a > c) max = a;
+if (b > c && b > a) max = b;
+if (c > a && c > b) max = c;
+
+k = max + m;
+Console.WriteLine("max wartość k to:" + k);
+
+while (m > 0)
 {
-    suma = 0;
-    for (int j = n/2 - i; j < n / 2 + i; j++) 
-    {
-        for (int k = n / 2 - i; k < n / 2 + i; k++)
-        {
-            suma = suma + T[j, k]; 
-        }
-    }
-    S.Add(suma);
+    if (a < b || a < c) a++ ; m--;
+    if (b < c || b < a) b++ ; m--;
+    if (c < a || c < b) c++ ; m--;
+    if (a == b && a == c) a++; m--;
 }
-
-Console.WriteLine("\n");
-
-foreach (var l in S) Console.WriteLine(l);
-
-int[] M = S.ToArray();
-for (int i = 0; i < S.Count; i++) 
-{
-    Console.WriteLine(M[i] - M[i-1]);
-}*/
-
-// Źle!!
-//wdfejbhfiweyurfh
