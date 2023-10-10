@@ -123,25 +123,25 @@ else Console.WriteLine("spolglosek wiecej");*/
 //Niech k oznacza największą liczbę osób siedzących na jednej ławce (po przyjściu tych dodatkowych m osób). 
 //Jaka jest minimalna, a jaka maksymalna wartość k?
 
-int a = int.Parse(Console.ReadLine());
-int b = int.Parse(Console.ReadLine());
-int c = int.Parse(Console.ReadLine());
-int m = int.Parse(Console.ReadLine());
+// int a = int.Parse(Console.ReadLine());
+// int b = int.Parse(Console.ReadLine());
+// int c = int.Parse(Console.ReadLine());
+// int m = int.Parse(Console.ReadLine());
 
-int max = 0, k;
-if (a > b && a > c) max = a;
-if (b > c && b > a) max = b;
-if (c > a && c > b) max = c;
+// int max = 0, k;
+// if (a > b && a > c) max = a;
+// if (b > c && b > a) max = b;
+// if (c > a && c > b) max = c;
 
-k = max + m;
-Console.WriteLine("max wartość k to:" + k);
+// k = max + m;
+// Console.WriteLine("max wartość k to:" + k);
 
-while (m > 0)
-{
-    if (a < b || a < c) a++ ; m--;
-    if (b < c || b < a) b++ ; m--;
-    if (c < a || c < b) c++ ; m--;
-    if (a == b && a == c) a++; m--;
-}
+// while (m > 0)
+// {
+//     if (a < b || a < c) a++ ; m--;
+//     if (b < c || b < a) b++ ; m--;
+//     if (c < a || c < b) c++ ; m--;
+//     if (a == b && a == c) a++; m--;
+// }
 
 //lob is in the air
