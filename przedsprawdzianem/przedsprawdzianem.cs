@@ -1,12 +1,11 @@
 
 using System;
 
-// bool Czypierwsza(int n)
-// {
-//     for(int i = 2; i < n/2;i++) if(n%i==0) return false;
-//     return true;
-
-// }
+bool Czypierwsza(int n)
+{
+    for(int i = 2; i < n/2;i++) if(n%i==0) return false;
+    return true;
+}
 
 //zad 1
 //czy podana liczba jest liczbą ibrahima
@@ -77,7 +76,17 @@ System.Console.WriteLine(suma);
 
 //zad 5
 // do podanej liczby pierwszej większej od 7 podaj 3 liczby pierwsze nieparzyste których suma jest równa tej liczbie
-// System.Console.WriteLine("liczbę pierwszą większą niż 7");
-// int n = int.Parse(Console.ReadLine());
-
-
+System.Console.WriteLine("liczbę pierwszą większą niż 7");
+int n = int.Parse(Console.ReadLine());
+int suma = 0;
+int i = 0;
+while(suma != n)
+{
+    if(Czypierwsza(i)&& i%n!=0 && suma + i <=n)
+    {
+        suma += i;
+        System.Console.WriteLine(i);
+    }
+    if(i>n) i=0;
+    i++;
+}
