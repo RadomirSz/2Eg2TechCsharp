@@ -7,7 +7,7 @@
 // if (haslo == Phaslo && login == Plogin)
 // {
 //     float x = float.Parse(Console.ReadLine());
-//     if(trzezwosc(x));
+//     if(trzezwosc());
 //     {}
 // }
 
