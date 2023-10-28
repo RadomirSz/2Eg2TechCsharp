@@ -100,7 +100,7 @@ string dzialanie = Console.ReadLine();
 DataTable dt = new();
 var wyn = dt.Compute(dzialanie, "");
 decimal wynik = Convert.ToDecimal(wyn);
-Console.WriteLine(wynik);
+Console.WriteLine("Wynik: " + wynik);
 
 Console.WriteLine("Czy chcesz wykonać kolejne działanie? T - Tak, N - Nie");
 string powtorz = Console.ReadLine();
