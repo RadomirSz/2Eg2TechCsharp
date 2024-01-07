@@ -63,18 +63,18 @@ Console.WriteLine(reku21(2,5));
 //3. Napisz algorytmy NWD modulo i odejmowanie w wersji reku.
 
 
-int reku31(int n,int n2)
-{
-    if (n2 != 0) return reku31(n2, n % n2);
-    return n;
-}
-Console.WriteLine(reku31(21,9));
+// int reku31(int n,int n2)
+// {
+//     if (n2 != 0) return reku31(n2, n % n2);
+//     return n;
+// }
+// Console.WriteLine(reku31(21,9));
 
 
-int reku32(int n, int n2)
-{
-    if (n < n2) return reku32(n , n2-n);
-    if (n > n2) return reku32(n-n2 , n2);
-    return n;
-}
-Console.WriteLine(reku32(16,20));
+// int reku32(int n, int n2)
+// {
+//     if (n < n2) return reku32(n , n2-n);
+//     if (n > n2) return reku32(n-n2 , n2);
+//     return n;
+// }
+// Console.WriteLine(reku32(16,20));
