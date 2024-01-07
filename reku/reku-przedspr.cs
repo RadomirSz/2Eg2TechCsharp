@@ -50,3 +50,18 @@ using System;
 // {
 //     System.Console.WriteLine(reku70(i));
 // }
+
+
+// a * 2 + (b-c)
+
+int reku3(int n)
+{
+    if(n == 1) return 1;
+    if(n == 2) return 2;
+    if(n == 3) return 3;
+    return reku3(n-3) * 2 + (reku3(n-2) - reku3(n-1));
+}
+for (int i = 1; i < 20; i++)
+{
+    System.Console.WriteLine(reku3(i));
+}
