@@ -154,8 +154,8 @@ Console.WriteLine(reku8(123456));
 
 //9. Zamiana dec na bin (iter + reku)
 
-int a = 67;
-string bin = "";
+//int a = 67;
+//string bin = "";
 //1000011
 /*while(a>0)
 {
